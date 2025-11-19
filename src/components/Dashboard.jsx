@@ -33,6 +33,17 @@ const Dashboard = () => {
   const postCount = posts.length;
   const likesReceived = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
   const commentsMade = posts.reduce((sum, p) => sum + (p.comments ? p.comments.length : 0), 0);
+  // Compute tag counts for trending tags
+  const tagCounts = posts.reduce((acc, p) => {
+    (p.tags || []).forEach(tag => {
+      acc[tag] = (acc[tag] || 0) + 1;
+    });
+    return acc;
+  }, {});
+
+  const trendingTags = Object.entries(tagCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6); // top 6 tags
 
   return (
     <div className="dashboard">
@@ -149,6 +160,16 @@ const Dashboard = () => {
             <h3>Create Tags</h3>
             <input type="text" placeholder="Add new tag..." />
             <button>Add Tag</button>
+          </div>
+          <div className="trending-section">
+            <h3>Trending Tags</h3>
+            <div className="trending-tags">
+              {trendingTags.length ? trendingTags.map(([tag, count]) => (
+                <button key={tag} className="tag" onClick={() => { setSearchTerm(tag); }}>
+                  {tag} <span className="tag-count">{count}</span>
+                </button>
+              )) : <p>No tags yet</p>}
+            </div>
           </div>
           <div>
             <h3>Share Profile Link</h3>
