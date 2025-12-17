@@ -1,4 +1,4 @@
-# Blog App
+# Dentify-app
 
 A small React + Vite blog application scaffold that demonstrates creating posts, viewing them in a dashboard, and a simple profile page. This repository contains the UI and components for a single-page app built with Vite and React.
 
@@ -59,5 +59,3 @@ Feel free to open issues, add features, or adapt this template for your own blog
 ## License
 
 This project is provided as-is. Add a license if you plan to publish or share broadly.
-
-"# Dentify-app"  
