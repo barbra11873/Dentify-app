@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "501834713922",
+    "firebase_url": "https://dentify-84ae9-default-rtdb.firebaseio.com",
+    "project_id": "dentify-84ae9",
+    "storage_bucket": "dentify-84ae9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501834713922:android:d8bdaa35f6212c438e96db",
+        "android_client_info": {
+          "package_name": "my.dentify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS4TCNJfK-mMSEjQpuIi49eVr7D83iYTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
